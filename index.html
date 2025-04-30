@@ -1,60 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accessibility Demo</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to main content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A demo webpage showcasing accessible HTML, CSS, and JavaScript practices including ARIA roles, keyboard support, and color contrast compliance."
+    />
+    <title>Accessibility Demo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main id="main">
-    <h1>Accessible Web Page</h1>
+    <main id="main">
+      <h1>Accessible Web Page</h1>
 
-    <section>
-      <h2>Form Example</h2>
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+      <section>
+        <h2>Form Example</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" aria-describedby="emailHelp" required />
-        <small id="emailHelp">We'll never share your email with anyone else.</small>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            aria-describedby="emailHelp"
+            required
+          />
+          <small id="emailHelp"
+            >We'll never share your email with anyone else.</small
+          >
 
-        <fieldset>
-          <legend>Preferred contact method:</legend>
-          <label><input type="radio" name="contact" value="email" /> Email</label>
-          <label><input type="radio" name="contact" value="phone" /> Phone</label>
-        </fieldset>
+          <fieldset>
+            <legend>Preferred contact method:</legend>
+            <label
+              ><input type="radio" name="contact" value="email" /> Email</label
+            >
+            <label
+              ><input type="radio" name="contact" value="phone" /> Phone</label
+            >
+          </fieldset>
 
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
 
-    <section>
-      <h2>Live Region Example</h2>
-      <button id="alertTrigger" type="button" aria-label="Trigger screen reader alert">
-        Trigger Alert
-      </button>
-      <div role="alert" aria-live="assertive" id="alertBox" class="visually-hidden"></div>
-    </section>
-  </main>
+      <section>
+        <h2>Live Region Example</h2>
+        <button
+          id="alertTrigger"
+          type="button"
+          aria-label="Trigger screen reader alert"
+        >
+          Trigger Alert
+        </button>
+        <div
+          role="alert"
+          aria-live="assertive"
+          id="alertBox"
+          class="visually-hidden"
+        ></div>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Accessible Demo</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Accessible Demo</p>
+    </footer>
 
-  <script src="js/scripts.js"></script>
-</body>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
